@@ -1,8 +1,8 @@
 public class Camion extends Vehiculo {
     private double capacidadCarga; // en toneladas
 
-    public Camion(String marca, String modelo, int año, double precio, double capacidadCarga) {
-        super(marca, modelo, año, precio);
+    public Camion(String marca, String modelo, int anio, double precio, double capacidadCarga) {
+        super(marca, modelo, anio, precio);
         if (capacidadCarga <= 0) {
             throw new IllegalArgumentException("La capacidad de carga debe ser mayor a 0");
         }

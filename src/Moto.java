@@ -1,8 +1,8 @@
 public class Moto extends Vehiculo {
     private int cilindrada;
 
-    public Moto(String marca, String modelo, int año, double precio, int cilindrada) {
-        super(marca, modelo, año, precio);
+    public Moto(String marca, String modelo, int anio, double precio, int cilindrada) {
+        super(marca, modelo, anio, precio);
         if (cilindrada <= 0) {
             throw new IllegalArgumentException("La cilindrada debe ser mayor a 0");
         }
