@@ -1,0 +1,22 @@
+public class Camion extends Vehiculo {
+    private double capacidadCarga; // en toneladas
+
+    public Camion(String marca, String modelo, int año, double precio, double capacidadCarga) {
+        super(marca, modelo, año, precio);
+        if (capacidadCarga <= 0) {
+            throw new IllegalArgumentException("La capacidad de carga debe ser mayor a 0");
+        }
+        this.capacidadCarga = capacidadCarga;
+    }
+
+    @Override
+    public double calcularImpuestoCirculacion() {
+        return (getPrecio() * 0.08) + (capacidadCarga * 50);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " - Capacidad de carga: " + capacidadCarga + " toneladas";
+    }
+}
+
